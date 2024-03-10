@@ -1,0 +1,54 @@
+{
+  "name": "openapi-fetch-tauri",
+  "version": "0.0.1",
+  "description": "Fast, type-safe fetch client for your OpenAPI schema. Uses tauri fetch.",
+  "author": "Luna Simons <luna@bddvlpr.com> (https://bddvlpr.com)",
+  "contributors": [
+    "Drew Powers <drew@pow.rs"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm run build:clean && pnpm run build:js && pnpm run build:js-min && pnpm run build:cjs",
+    "build:clean": "del dist",
+    "build:js": "mkdir -p dist && cp src/* dist",
+    "build:js-min": "esbuild --bundle src/index.js --format=esm --minify --outfile=dist/index.min.js && cp dist/index.d.ts dist/index.min.d.ts",
+    "build:cjs": "esbuild --bundle src/index.js --format=cjs --outfile=dist/cjs/index.cjs && cp dist/index.d.ts dist/cjs/index.d.cts",
+    "test": "tsc --noEmit && vitest run",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write . && eslint . --fix"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.5.3",
+    "openapi-typescript-helpers": "^0.0.7"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./*": "./*"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "del-cli": "^5.1.0",
+    "esbuild": "^0.20.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vitest": "^0.3.25",
+    "openapi-typescript": "^6.7.4",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2",
+    "vitest": "^1.3.1"
+  }
+}
