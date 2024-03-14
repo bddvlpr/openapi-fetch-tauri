@@ -1,6 +1,6 @@
 # openapi-fetch-tauri
 
-This library is an [openapi-fetch](https://github.com/drwpow/openapi-typescript/tree/main/packages/openapi-fetch) clone that uses [Tauri's HTTP API](https://tauri.app/v1/api/js/http/). Because of this, it is a drop-in replacement for openapi-fetch, and can be used in the same way.
+This library is an [openapi-fetch](https://github.com/drwpow/openapi-typescript/tree/main/packages/openapi-fetch) clone that uses [Tauri's HTTP API](https://tauri.app/v1/api/js/http/). Because of this, it is a drop-in replacement for openapi-fetch, and can be used in the same way.  
 _Thanks, [@drwpow](https://github.com/drwpow)!_
 
 > [!CAUTION]
