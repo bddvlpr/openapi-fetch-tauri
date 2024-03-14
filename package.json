@@ -1,6 +1,6 @@
 {
   "name": "openapi-fetch-tauri",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fast, type-safe fetch client for your OpenAPI schema. Uses tauri fetch.",
   "author": "Luna Simons <luna@bddvlpr.com> (https://bddvlpr.com)",
   "contributors": [
