@@ -13,14 +13,14 @@ In order to get started, generate a specification file using [openapi-typescript
 ```sh
 # Local schema...
 npx openapi-typescript ./path/to/my/schema.yaml -o ./path/to/my/schem # npm
-yarn dlx openapi-fetch-tauri ./path/to/my/schema.d.ts -o ./path/to/my/schema.ts # or yarn
-pnpm dlx openapi-fetch-tauri ./path/to/my/schema.d.ts -o ./path/to/my/schema.ts # or pnpm
+yarn dlx openapi-typescript ./path/to/my/schema.d.ts -o ./path/to/my/schema.ts # or yarn
+pnpm dlx openapi-typescript ./path/to/my/schema.d.ts -o ./path/to/my/schema.ts # or pnpm
 # 🚀 ./path/to/my/schema.yaml -> ./path/to/my/schema.d.ts [7ms]
 
 # Remote schema...
 npx openapi-typescript https://example.com/schema.yaml -o ./path/to/my/schema # npm
-yarn dlx openapi-fetch-tauri https://example.com/schema.d.ts -o ./path/to/my/schema.ts # or yarn
-pnpm dlx openapi-fetch-tauri https://example.com/schema.d.ts -o ./path/to/my/schema.ts # or pnpm
+yarn dlx openapi-typescript https://example.com/schema.d.ts -o ./path/to/my/schema.ts # or yarn
+pnpm dlx openapi-typescript https://example.com/schema.d.ts -o ./path/to/my/schema.ts # or pnpm
 # 🚀 https://example.com/schema.yaml -> ./path/to/my/schema.d.ts [7ms]
 ```
 
